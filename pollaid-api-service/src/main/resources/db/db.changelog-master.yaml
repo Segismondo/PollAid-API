@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: createUserTable
+      author: Denys Dubovskyy
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: changelog/01-create-user-table.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: createPollTable
+      author: Miguel Sanchez-Brunete Alvarez
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: changelog/02-create-poll-table.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: createOptionTable
+      author: Miguel Sanchez-Brunete Alvarez
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: changelog/03-create-option-table.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: createAnswerTable
+      author: Miguel Sanchez-Brunete Alvarez
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: changelog/04-create-answer-table.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: createOptionAnswerTable
+      author: Miguel Sanchez-Brunete Alvarez
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: changelog/05-create-option-answer-table.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true

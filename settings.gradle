@@ -1,0 +1,4 @@
+rootProject.name = 'pollaid-api-service'
+include 'pollaid-api-service'
+include 'pollaid-api-service-docker'
+

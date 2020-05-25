@@ -1,0 +1,21 @@
+plugins {
+    id "com.palantir.docker" version "0.22.1"
+}
+
+apply plugin: 'com.palantir.docker'
+
+def appProjectName = rootProject.name.toLowerCase()
+def appProjectVersion = rootProject.version.toString()
+
+docker {
+    dependsOn project(":pollaid-api-service").build
+
+    name "${appProjectName}"
+
+    tag 'Versioned', "${appProjectName}:${appProjectVersion}"
+    tag 'Latest', "${appProjectName}:latest"
+
+    dockerfile file('src/main/docker/Dockerfile')
+
+    files project(":pollaid-api-service").bootJar.outputs
+}
